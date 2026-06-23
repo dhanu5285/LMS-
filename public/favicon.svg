@@ -1,0 +1,52 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pinGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stopColor="#2563EB" />
+      <stop offset="100%" stopColor="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stopColor="#10B981" stopOpacity="0.8" />
+      <stop offset="100%" stopColor="#10B981" stopOpacity="0" />
+    </linearGradient>
+    <clipPath id="pinClip">
+      <path d="M 50 12 C 31.8 12 17 26.8 17 45 C 17 64 50 82 50 82 C 50 82 83 64 83 45 C 83 26.8 68.2 12 50 12 Z" />
+    </clipPath>
+  </defs>
+  
+  <!-- Outer Pin -->
+  <path
+    d="M 50 6 C 27.5 6 10 23.5 10 46 C 10 70 50 92 50 92 C 50 92 90 70 90 46 C 90 23.5 72.5 6 50 6 Z"
+    fill="url(#pinGrad)"
+    stroke="#10B981"
+    strokeWidth="4.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+
+  <!-- Inside Pin Area Clip for Chart Area -->
+  <g clip-path="url(#pinClip)">
+    <path
+      d="M 32 66 C 39 60 45 61 52 48 C 59 35 64 30 70 24 L 70 80 L 32 80 Z"
+      fill="url(#chartGrad)"
+    />
+  </g>
+
+  <!-- Growth Line -->
+  <path
+    d="M 32 66 C 39 60 45 61 52 48 C 59 35 64 30 70 24"
+    stroke="#10B981"
+    strokeWidth="5.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+
+  <!-- End Node -->
+  <circle
+    cx="70"
+    cy="24"
+    r="5.5"
+    fill="#FFFFFF"
+    stroke="#10B981"
+    strokeWidth="2.5"
+  />
+</svg>
